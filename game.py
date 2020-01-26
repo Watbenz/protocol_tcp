@@ -1,5 +1,6 @@
 class Unit:
-    def __init__(self, atk, max_hp):
+    def __init__(self, name, atk, max_hp):
+        self.name = name
         self.atk = atk
         self.MAX_HP = max_hp
         self.hp = max_hp
@@ -12,6 +13,9 @@ class Unit:
 
     def attack(self, unit):
         unit.lost_hp(self.atk)
+
+    def to_string(self):
+        return '%s: %d/%d' % (self.name, self.hp, self.MAX_HP)
 
 
 class GameObject:

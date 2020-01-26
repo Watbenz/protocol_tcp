@@ -16,8 +16,7 @@ while running:
     obj = pickle.loads(received)
 
     if obj.typ == 'Unit':
-        unit = obj.item
-        print("Boss: %d/%d" % (unit.hp, unit.MAX_HP))
+        print(obj.item)
     elif obj.typ == 'String':
         special_message = obj.item
     elif obj.typ == 'Action':
