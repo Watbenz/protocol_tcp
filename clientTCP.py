@@ -24,7 +24,9 @@ while running:
             break
 
     if not special_message:
-        print('A: Attack, Q: Quit')
+        print('A: Attack')
+        print('C: Check information')
+        print('Q: Quit')
     else:
         print(special_message)
         special_message = ''
