@@ -1,3 +1,5 @@
+import copy
+
 class Unit:
     def __init__(self, name, atk, max_hp):
         self.name = name
@@ -16,6 +18,9 @@ class Unit:
 
     def to_string(self):
         return '%s: %d/%d' % (self.name, self.hp, self.MAX_HP)
+
+    def copy(self):
+        return copy.copy(self)
 
 
 class GameObject:
